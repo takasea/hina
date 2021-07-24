@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'utilities/selectuiplatform.dart';
 
 void main() {
   // debugPrintBeginFrameBanner = true;
@@ -60,6 +61,7 @@ class SomeScreen extends StatelessWidget {
               Text(
                 'You have pushed the button this many times:',
               ),
+              SomeWidget(),
               ValueListenableBuilder<int>(
                 // valueListenable:
                 //     GlobalObjectKey<AppState>('state').currentState!.counter,
@@ -83,6 +85,20 @@ class SomeScreen extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
       ),
+    );
+  }
+}
+
+class SomeWidget extends StatelessWidget {
+  const SomeWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SelectUIPlatform(
+      platformIOS:
+          Container(width: 100, height: 100, color: Colors.lightBlueAccent),
+      platformWeb: Container(width: 20, height: 20, color: Colors.red),
+      defaultUI: Container(width: 20, height: 20, color: Colors.black),
     );
   }
 }
