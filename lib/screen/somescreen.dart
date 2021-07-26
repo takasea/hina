@@ -42,7 +42,7 @@ class SomeScreen extends StatelessWidget {
       ),
     );
 
-    return SelectUIPlatform(
+    return SelectPlatformUI(
       platformIOS: SomeScreenIOS(title: title, child: scaffoldBody),
       defaultUI: SomeScreenAndroid(title: title, body: scaffoldBody),
     );

@@ -2,8 +2,8 @@ import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/widgets.dart';
 
-class SelectUIPlatform extends StatelessWidget {
-  SelectUIPlatform({
+class SelectPlatformUI extends StatelessWidget {
+  SelectPlatformUI({
     Key? key,
     this.platformAndroid,
     this.platformFuchsia,

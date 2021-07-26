@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'platformsetting.dart';
-import 'screen/somescreen.dart';
-import 'screen/secondscreen.dart';
+
+import 'utilities/selectuiplatform.dart';
+
+import 'ui/android/materialappui.dart';
+import 'ui/ios/cupertinoappui.dart';
 
 void main() {
   // debugPrintBeginFrameBanner = true;
@@ -31,11 +33,9 @@ class AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformSetting(
-      routes: {
-        SomeScreen.name: (context) => SomeScreen(title: 'some screen'),
-        SecondScreen.name: (context) => SecondScreen(),
-      },
+    return SelectPlatformUI(
+      platformIOS: CupertinoAppUI(),
+      defaultUI: MaterialAppUI(),
     );
   }
 

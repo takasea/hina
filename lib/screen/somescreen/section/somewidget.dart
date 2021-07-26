@@ -6,7 +6,7 @@ class SomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SelectUIPlatform(
+    return SelectPlatformUI(
       platformIOS:
           Container(width: 100, height: 100, color: Colors.lightBlueAccent),
       platformWeb: Container(width: 20, height: 20, color: Colors.red),

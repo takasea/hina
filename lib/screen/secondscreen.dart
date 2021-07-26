@@ -8,7 +8,7 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SelectUIPlatform(
+    return SelectPlatformUI(
       platformIOS: SecondScreenIOS(child: scaffoldBody),
       defaultUI: SecondScreenAndroid(body: scaffoldBody),
     );
