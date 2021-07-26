@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import '/screen/secondscreen.dart';
-import '/screen/somescreen.dart';
+import 'screen/cupertinosomescreen.dart';
+import 'screen/cupertinosecondscreen.dart';
 
 class CupertinoAppUI extends StatelessWidget {
   const CupertinoAppUI({Key? key}) : super(key: key);
@@ -9,8 +9,9 @@ class CupertinoAppUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       routes: {
-        SomeScreen.name: (context) => SomeScreen(title: 'some screen'),
-        SecondScreen.name: (context) => SecondScreen(),
+        CupertinoSomeScreen.name: (context) =>
+            CupertinoSomeScreen(title: 'some screen'),
+        CupertinoSecondScreen.name: (context) => CupertinoSecondScreen(),
       },
     );
   }

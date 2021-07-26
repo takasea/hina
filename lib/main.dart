@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'utilities/selectuiplatform.dart';
 
-import 'ui/android/materialappui.dart';
+import 'ui/material/materialappui.dart';
 import 'ui/ios/cupertinoappui.dart';
 
 void main() {
