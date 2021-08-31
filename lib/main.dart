@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'utilities/selectuiplatform.dart';
+import 'model/countdata.dart';
 
+import 'utilities/selectuiplatform.dart';
 import 'ui/material/materialappui.dart';
 import 'ui/ios/cupertinoappui.dart';
 
@@ -21,13 +22,22 @@ class App extends StatefulWidget {
   AppState createState() => AppState();
 }
 
-class AppState extends State<App> {
+class AppState extends State<App> with WidgetsBindingObserver {
   final ValueNotifier<int> counter = ValueNotifier<int>(0);
-  //other state
+  final ListData listData = ListData();
+
+  //TODO : add other state
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addObserver(this);
+  }
 
   @override
   void dispose() {
     counter.dispose();
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
   }
 
@@ -39,8 +49,13 @@ class AppState extends State<App> {
     );
   }
 
-  static const _store = GlobalObjectKey<AppState>('state');
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    //TODO: app lifecycle
+    print('App lifecycle: $state');
+  }
+
   static AppState get draw {
-    return _store.currentState!;
+    return GlobalObjectKey<AppState>('state').currentState!;
   }
 }

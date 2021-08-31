@@ -16,8 +16,6 @@ class CupertinoSomeScreen extends StatelessWidget {
         middle: Text(title),
         trailing: GestureDetector(
           onTap: () {
-            //You can call _store, but I don't want you to use it.
-            // AppState._store!.currentState!.counter.value++;
             AppState.draw.counter.value++;
           },
           child: const Icon(Icons.add),
@@ -29,7 +27,7 @@ class CupertinoSomeScreen extends StatelessWidget {
           children: <Widget>[
             GestureDetector(
               child: Text(
-                'You have pushed the button this many times:',
+                'Push this text!',
               ),
               onTap: () {
                 Navigator.pushNamed(context, CupertinoSecondScreen.name);
