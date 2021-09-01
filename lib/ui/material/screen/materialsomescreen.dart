@@ -4,7 +4,7 @@ import 'materialsecondscreen.dart';
 import '/ui/section/somewidget.dart';
 
 class MaterialSomeScreen extends StatelessWidget {
-  MaterialSomeScreen({Key? key, required this.title}) : super(key: key);
+  const MaterialSomeScreen({Key? key, required this.title}) : super(key: key);
   static const String name = '/';
   final String title;
 
@@ -19,14 +19,14 @@ class MaterialSomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GestureDetector(
-              child: Text(
+              child: const Text(
                 'Push this text!',
               ),
               onTap: () {
                 Navigator.pushNamed(context, MaterialSecondScreen.name);
               },
             ),
-            SomeWidget(),
+            const SomeWidget(),
             ValueListenableBuilder<int>(
               // valueListenable:
               //     GlobalObjectKey<AppState>('state').currentState!.counter,

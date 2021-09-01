@@ -10,8 +10,8 @@ class MaterialAppUI extends StatelessWidget {
     return MaterialApp(
       routes: {
         MaterialSomeScreen.name: (context) =>
-            MaterialSomeScreen(title: 'some screen'),
-        MaterialSecondScreen.name: (context) => MaterialSecondScreen(),
+            const MaterialSomeScreen(title: 'some screen'),
+        MaterialSecondScreen.name: (context) => const MaterialSecondScreen(),
       },
     );
   }

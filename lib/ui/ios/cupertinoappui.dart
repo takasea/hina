@@ -10,8 +10,8 @@ class CupertinoAppUI extends StatelessWidget {
     return CupertinoApp(
       routes: {
         CupertinoSomeScreen.name: (context) =>
-            CupertinoSomeScreen(title: 'some screen'),
-        CupertinoSecondScreen.name: (context) => CupertinoSecondScreen(),
+            const CupertinoSomeScreen(title: 'some screen'),
+        CupertinoSecondScreen.name: (context) => const CupertinoSecondScreen(),
       },
     );
   }

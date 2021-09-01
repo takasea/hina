@@ -43,7 +43,7 @@ class AppState extends State<App> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return SelectPlatformUI(
+    return const SelectPlatformUI(
       platformIOS: CupertinoAppUI(),
       defaultUI: MaterialAppUI(),
     );
@@ -56,6 +56,6 @@ class AppState extends State<App> with WidgetsBindingObserver {
   }
 
   static AppState get draw {
-    return GlobalObjectKey<AppState>('state').currentState!;
+    return const GlobalObjectKey<AppState>('state').currentState!;
   }
 }

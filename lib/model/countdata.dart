@@ -9,14 +9,14 @@ class ListData {
         _addListNumber = addListNumber;
 
   Future<void> getData() async {
-    await Future.delayed(Duration(seconds: 1), () {
+    await Future.delayed(const Duration(seconds: 1), () {
       final int base = list.length;
 
       for (int i = 1; i < _addListNumber + 1; i++) {
         list.add(base + i);
       }
     }).timeout(
-      Duration(seconds: 2),
+      const Duration(seconds: 2),
       onTimeout: () async {
         print('timeout!');
         await getData();

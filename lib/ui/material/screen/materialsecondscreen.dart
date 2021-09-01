@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hina/main.dart' show AppState;
+import '/../../main.dart' show AppState;
 import '../../section/infinitelistviewbuilder.dart';
 
 class MaterialSecondScreen extends StatelessWidget {
-  MaterialSecondScreen({Key? key}) : super(key: key);
+  const MaterialSecondScreen({Key? key}) : super(key: key);
   static const String name = '/second';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('second screen'),
+        title: const Text('second screen'),
       ),
       body: InfiniteListViewBuilder(
         list: AppState.draw.listData.list,

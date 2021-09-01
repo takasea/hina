@@ -26,14 +26,14 @@ class CupertinoSomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GestureDetector(
-              child: Text(
+              child: const Text(
                 'Push this text!',
               ),
               onTap: () {
                 Navigator.pushNamed(context, CupertinoSecondScreen.name);
               },
             ),
-            SomeWidget(),
+            const SomeWidget(),
             ValueListenableBuilder<int>(
               // valueListenable:
               //     GlobalObjectKey<AppState>('state').currentState!.counter,

@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart' show AsyncCallback;
 import 'package:flutter/widgets.dart';
 
 class InfiniteListViewBuilder extends StatefulWidget {
-  InfiniteListViewBuilder({
+  const InfiniteListViewBuilder({
     Key? key,
     required this.list,
     required this.addData,

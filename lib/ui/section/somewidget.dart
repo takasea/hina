@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hina/utilities/selectuiplatform.dart';
+import '../../utilities/selectuiplatform.dart';
 
 class SomeWidget extends StatelessWidget {
   const SomeWidget({Key? key}) : super(key: key);

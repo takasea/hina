@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/widgets.dart';
 
 class SelectPlatformUI extends StatelessWidget {
-  SelectPlatformUI({
+  const SelectPlatformUI({
     Key? key,
     this.platformAndroid,
     this.platformFuchsia,

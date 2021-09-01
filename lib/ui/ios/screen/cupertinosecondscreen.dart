@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hina/main.dart' show AppState;
+import '/../../main.dart' show AppState;
 import '/ui/section/infinitelistviewbuilder.dart';
 
 class CupertinoSecondScreen extends StatelessWidget {
-  CupertinoSecondScreen({Key? key}) : super(key: key);
+  const CupertinoSecondScreen({Key? key}) : super(key: key);
   static const String name = '/second';
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text('second screen'),
       ),
       child: InfiniteListViewBuilder(
