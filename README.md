@@ -10,6 +10,8 @@
 
 4. Coding!
 
+I think you'll fix the test first. If you really don't want to write tests, you might comment out all the tests, but I don't recommend it. Then, is the cognitive load high?
+
 ```
 Rather than increasing the cognitive load and reducing redundancy, We want to reduce the cognitive load even if it means describing the same thing in a same way.
 ```
